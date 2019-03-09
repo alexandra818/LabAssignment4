@@ -56,9 +56,9 @@
 
         }
 
-        .two-column {
+        .one-column {
             display: grid;
-            grid-template-columns: 2fr 8fr;
+           
             background-color: #FFF;
             /* width: 100%; */
             grid-column-gap: 1em;
@@ -134,6 +134,13 @@
             float: right;
             margin-top: 12px;
         }
+        .error-message {
+            color: red;
+            padding: 7px;
+            margin-top: 5px;
+            display: block;
+            display: none;
+        }
     </style>
 </head>
 
@@ -142,33 +149,25 @@
     <div class="r1">
         <h2>Alexandra</h2>
     </div>
-    <div class="r2 two-column">
-        <div class="c1 box-shadow">
-            <h2 class="txt-center">Navigation</h2>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact-us.html">Contact Us</a></li>
-            <li><a href="./gallery.html">Gallery</a></li>
-            <li><a href="#">Link 5</a></li>
-            <li><a href="#">Link 6</a></li>
-            <li><a href="#">Link 7</a></li>
-            </ul>
-        </div>
+    <div class="r2 one-column">
+
         <div class="c2">
-            <h2>Contact Us</h2>
+         
             <form class="contact-form">
-                <input placeholder="First Name" type="text" id="first-name" class="contact-input">
-                <input placeholder="Last Name" type="text" id="last-name" class="contact-input">
-                <input placeholder="Email" type="text" id="email" class="contact-input">
-                <button onclick="contact.goToHome()" class="submit-button" type="submit">Submit</button>
+                <input placeholder="Username" type="text" id="username" class="contact-input">
+                <input placeholder="Password" type="password" id="password" class="contact-input">
+               
+                <button onclick="login.login()" class="submit-button" type="button">Login</button>
+                <span id="error-box"class="error-message">Error Here</span>
             </form>
+          
         </div>
 
     </div>
     <div class="r3">
         Copyright 2019 - Created by Alexandra Garcia Castro
     </div>
-    <script type="text/javascript" src="./js/contact.js"></script>
+    <script type="text/javascript" src="./js/login.js"></script>
 </body>
 
 </html>
